@@ -13,6 +13,8 @@
 		13B070F419A495C200C39DE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13B070F219A495C200C39DE7 /* Main.storyboard */; };
 		13B070F619A495C200C39DE7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B070F519A495C200C39DE7 /* Images.xcassets */; };
 		13B0710219A495C200C39DE7 /* ViewMovingTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B0710119A495C200C39DE7 /* ViewMovingTextTests.m */; };
+		13B0710D19A49A5F00C39DE7 /* FrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B0710C19A49A5F00C39DE7 /* FrameView.m */; };
+		13B0710F19A49F8800C39DE7 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13B0710E19A49F8800C39DE7 /* background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,9 @@
 		13B070FB19A495C200C39DE7 /* ViewMovingTextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewMovingTextTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B0710019A495C200C39DE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13B0710119A495C200C39DE7 /* ViewMovingTextTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewMovingTextTests.m; sourceTree = "<group>"; };
+		13B0710B19A49A5F00C39DE7 /* FrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameView.h; sourceTree = "<group>"; };
+		13B0710C19A49A5F00C39DE7 /* FrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameView.m; sourceTree = "<group>"; };
+		13B0710E19A49F8800C39DE7 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +89,9 @@
 				13B070EF19A495C200C39DE7 /* ViewController.h */,
 				13B070F019A495C200C39DE7 /* ViewController.m */,
 				13B070F219A495C200C39DE7 /* Main.storyboard */,
+				13B0710B19A49A5F00C39DE7 /* FrameView.h */,
+				13B0710C19A49A5F00C39DE7 /* FrameView.m */,
+				13B0710E19A49F8800C39DE7 /* background.jpg */,
 				13B070F519A495C200C39DE7 /* Images.xcassets */,
 				13B070E819A495C200C39DE7 /* Supporting Files */,
 			);
@@ -198,6 +206,7 @@
 			files = (
 				13B070F419A495C200C39DE7 /* Main.storyboard in Resources */,
 				13B070F619A495C200C39DE7 /* Images.xcassets in Resources */,
+				13B0710F19A49F8800C39DE7 /* background.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B0710D19A49A5F00C39DE7 /* FrameView.m in Sources */,
 				13B070F119A495C200C39DE7 /* ViewController.m in Sources */,
 				13B070EE19A495C200C39DE7 /* AppDelegate.m in Sources */,
 				13B070EB19A495C200C39DE7 /* main.m in Sources */,
