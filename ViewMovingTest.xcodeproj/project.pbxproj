@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		13B070E519A495C200C39DE7 /* ViewMovingText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewMovingText.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B070E519A495C200C39DE7 /* ViewMovingTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewMovingTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B070E919A495C200C39DE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13B070EA19A495C200C39DE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		13B070EC19A495C200C39DE7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,7 +37,7 @@
 		13B070F019A495C200C39DE7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		13B070F319A495C200C39DE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13B070F519A495C200C39DE7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		13B070FB19A495C200C39DE7 /* ViewMovingTextTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewMovingTextTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B070FB19A495C200C39DE7 /* ViewMovingTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewMovingTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B0710019A495C200C39DE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13B0710119A495C200C39DE7 /* ViewMovingTextTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewMovingTextTests.m; sourceTree = "<group>"; };
 		13B0710B19A49A5F00C39DE7 /* FrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameView.h; sourceTree = "<group>"; };
@@ -66,8 +66,8 @@
 		13B070DC19A495C200C39DE7 = {
 			isa = PBXGroup;
 			children = (
-				13B070E719A495C200C39DE7 /* ViewMovingText */,
-				13B070FE19A495C200C39DE7 /* ViewMovingTextTests */,
+				13B070E719A495C200C39DE7 /* ViewMovingTest */,
+				13B070FE19A495C200C39DE7 /* ViewMovingTestTests */,
 				13B070E619A495C200C39DE7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,13 +75,13 @@
 		13B070E619A495C200C39DE7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B070E519A495C200C39DE7 /* ViewMovingText.app */,
-				13B070FB19A495C200C39DE7 /* ViewMovingTextTests.xctest */,
+				13B070E519A495C200C39DE7 /* ViewMovingTest.app */,
+				13B070FB19A495C200C39DE7 /* ViewMovingTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		13B070E719A495C200C39DE7 /* ViewMovingText */ = {
+		13B070E719A495C200C39DE7 /* ViewMovingTest */ = {
 			isa = PBXGroup;
 			children = (
 				13B070EC19A495C200C39DE7 /* AppDelegate.h */,
@@ -95,6 +95,7 @@
 				13B070F519A495C200C39DE7 /* Images.xcassets */,
 				13B070E819A495C200C39DE7 /* Supporting Files */,
 			);
+			name = ViewMovingTest;
 			path = ViewMovingText;
 			sourceTree = "<group>";
 		};
@@ -107,12 +108,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B070FE19A495C200C39DE7 /* ViewMovingTextTests */ = {
+		13B070FE19A495C200C39DE7 /* ViewMovingTestTests */ = {
 			isa = PBXGroup;
 			children = (
 				13B0710119A495C200C39DE7 /* ViewMovingTextTests.m */,
 				13B070FF19A495C200C39DE7 /* Supporting Files */,
 			);
+			name = ViewMovingTestTests;
 			path = ViewMovingTextTests;
 			sourceTree = "<group>";
 		};
@@ -127,9 +129,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		13B070E419A495C200C39DE7 /* ViewMovingText */ = {
+		13B070E419A495C200C39DE7 /* ViewMovingTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B0710519A495C200C39DE7 /* Build configuration list for PBXNativeTarget "ViewMovingText" */;
+			buildConfigurationList = 13B0710519A495C200C39DE7 /* Build configuration list for PBXNativeTarget "ViewMovingTest" */;
 			buildPhases = (
 				13B070E119A495C200C39DE7 /* Sources */,
 				13B070E219A495C200C39DE7 /* Frameworks */,
@@ -139,14 +141,14 @@
 			);
 			dependencies = (
 			);
-			name = ViewMovingText;
+			name = ViewMovingTest;
 			productName = ViewMovingText;
-			productReference = 13B070E519A495C200C39DE7 /* ViewMovingText.app */;
+			productReference = 13B070E519A495C200C39DE7 /* ViewMovingTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		13B070FA19A495C200C39DE7 /* ViewMovingTextTests */ = {
+		13B070FA19A495C200C39DE7 /* ViewMovingTestTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B0710819A495C200C39DE7 /* Build configuration list for PBXNativeTarget "ViewMovingTextTests" */;
+			buildConfigurationList = 13B0710819A495C200C39DE7 /* Build configuration list for PBXNativeTarget "ViewMovingTestTests" */;
 			buildPhases = (
 				13B070F719A495C200C39DE7 /* Sources */,
 				13B070F819A495C200C39DE7 /* Frameworks */,
@@ -157,9 +159,9 @@
 			dependencies = (
 				13B070FD19A495C200C39DE7 /* PBXTargetDependency */,
 			);
-			name = ViewMovingTextTests;
+			name = ViewMovingTestTests;
 			productName = ViewMovingTextTests;
-			productReference = 13B070FB19A495C200C39DE7 /* ViewMovingTextTests.xctest */;
+			productReference = 13B070FB19A495C200C39DE7 /* ViewMovingTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -180,7 +182,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 13B070E019A495C200C39DE7 /* Build configuration list for PBXProject "ViewMovingText" */;
+			buildConfigurationList = 13B070E019A495C200C39DE7 /* Build configuration list for PBXProject "ViewMovingTest" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -193,8 +195,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B070E419A495C200C39DE7 /* ViewMovingText */,
-				13B070FA19A495C200C39DE7 /* ViewMovingTextTests */,
+				13B070E419A495C200C39DE7 /* ViewMovingTest */,
+				13B070FA19A495C200C39DE7 /* ViewMovingTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -244,7 +246,7 @@
 /* Begin PBXTargetDependency section */
 		13B070FD19A495C200C39DE7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B070E419A495C200C39DE7 /* ViewMovingText */;
+			target = 13B070E419A495C200C39DE7 /* ViewMovingTest */;
 			targetProxy = 13B070FC19A495C200C39DE7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -346,7 +348,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ViewMovingText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ViewMovingTest;
 			};
 			name = Debug;
 		};
@@ -357,7 +359,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ViewMovingText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ViewMovingTest;
 			};
 			name = Release;
 		};
@@ -375,7 +377,7 @@
 				);
 				INFOPLIST_FILE = ViewMovingTextTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ViewMovingTestTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViewMovingText.app/ViewMovingText";
 			};
 			name = Debug;
@@ -390,7 +392,7 @@
 				);
 				INFOPLIST_FILE = ViewMovingTextTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ViewMovingTestTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViewMovingText.app/ViewMovingText";
 			};
 			name = Release;
@@ -398,7 +400,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		13B070E019A495C200C39DE7 /* Build configuration list for PBXProject "ViewMovingText" */ = {
+		13B070E019A495C200C39DE7 /* Build configuration list for PBXProject "ViewMovingTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B0710319A495C200C39DE7 /* Debug */,
@@ -407,7 +409,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B0710519A495C200C39DE7 /* Build configuration list for PBXNativeTarget "ViewMovingText" */ = {
+		13B0710519A495C200C39DE7 /* Build configuration list for PBXNativeTarget "ViewMovingTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B0710619A495C200C39DE7 /* Debug */,
@@ -415,7 +417,7 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		13B0710819A495C200C39DE7 /* Build configuration list for PBXNativeTarget "ViewMovingTextTests" */ = {
+		13B0710819A495C200C39DE7 /* Build configuration list for PBXNativeTarget "ViewMovingTestTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B0710919A495C200C39DE7 /* Debug */,
