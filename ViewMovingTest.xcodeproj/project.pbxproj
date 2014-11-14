@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13863ADA1A15C2D800479B65 /* ViewForControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 13863AD91A15C2D800479B65 /* ViewForControl.m */; };
 		13B070EB19A495C200C39DE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B070EA19A495C200C39DE7 /* main.m */; };
 		13B070EE19A495C200C39DE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B070ED19A495C200C39DE7 /* AppDelegate.m */; };
 		13B070F119A495C200C39DE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B070F019A495C200C39DE7 /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13863AD81A15C2D800479B65 /* ViewForControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewForControl.h; sourceTree = "<group>"; };
+		13863AD91A15C2D800479B65 /* ViewForControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewForControl.m; sourceTree = "<group>"; };
 		13B070E519A495C200C39DE7 /* ViewMovingTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewMovingTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B070E919A495C200C39DE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13B070EA19A495C200C39DE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +92,8 @@
 				13B070EF19A495C200C39DE7 /* ViewController.h */,
 				13B070F019A495C200C39DE7 /* ViewController.m */,
 				13B070F219A495C200C39DE7 /* Main.storyboard */,
+				13863AD81A15C2D800479B65 /* ViewForControl.h */,
+				13863AD91A15C2D800479B65 /* ViewForControl.m */,
 				13B0710B19A49A5F00C39DE7 /* FrameView.h */,
 				13B0710C19A49A5F00C39DE7 /* FrameView.m */,
 				13B0710E19A49F8800C39DE7 /* background.jpg */,
@@ -230,6 +235,7 @@
 				13B070F119A495C200C39DE7 /* ViewController.m in Sources */,
 				13B070EE19A495C200C39DE7 /* AppDelegate.m in Sources */,
 				13B070EB19A495C200C39DE7 /* main.m in Sources */,
+				13863ADA1A15C2D800479B65 /* ViewForControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +422,7 @@
 				13B0710719A495C200C39DE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		13B0710819A495C200C39DE7 /* Build configuration list for PBXNativeTarget "ViewMovingTestTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +431,7 @@
 				13B0710A19A495C200C39DE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

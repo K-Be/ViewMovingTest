@@ -15,11 +15,19 @@
 @property (nonatomic, strong) IBOutlet FrameView* frameView;
 @property (nonatomic, strong) IBOutlet UIImageView* backgroundImageView;
 @property (nonatomic, strong) IBOutlet UISwitch* transformSwitch;
+@property (nonatomic, strong) IBOutlet UISlider* timeIntervalsSlider;
+@property (nonatomic, strong) IBOutlet UIView* destinationIndicatorView;
+@property (nonatomic, strong) IBOutlet UISwitch* timerSwitch;
 @property (nonatomic, strong) UIPanGestureRecognizer* panRecognizer;
+@property (nonatomic, weak) NSTimer* timer;
 @property (nonatomic) CGPoint startCenter;
 
 - (void)panRecognizerAction:(id)sender;
 - (IBAction)transformSwitchAction:(id)sender;
+- (IBAction)tmeIntervalChanged:(id)sender;
+- (IBAction)timerSwitchValueChanged:(UISwitch*)sender;
+
+- (void)moveViewToRandomPosition:(NSTimer*)sender;
 
 @end
 
@@ -27,6 +35,9 @@
 @interface ViewController (Private)
 
 - (void)_updateTransformation;
+- (void)_scheduleTimerWithNewTime;
+
+- (void)_setForFrameViewNewCenter:(CGPoint)center;
 
 @end
 
@@ -42,6 +53,7 @@
 	
 	[self _updateTransformation];
 	
+	[self _scheduleTimerWithNewTime];
 }
 
 
@@ -67,7 +79,7 @@
 	{
 		CGPoint transition = [_panRecognizer translationInView:self.view];
 		CGPoint newCenter = CGPointMake(_startCenter.x + transition.x, _startCenter.y + transition.y);
-		self.frameView.center = newCenter;
+		[self _setForFrameViewNewCenter:newCenter];
 	}
 	else
 	{
@@ -81,6 +93,42 @@
 	[self _updateTransformation];
 }
 
+
+- (IBAction)tmeIntervalChanged:(id)sender
+{
+	if (self.timerSwitch.on)
+	{
+		[self _scheduleTimerWithNewTime];
+	}
+}
+
+
+- (IBAction)timerSwitchValueChanged:(UISwitch*)sender
+{
+	if (sender.on)
+	{
+		[self _scheduleTimerWithNewTime];
+	}
+	else
+	{
+		[_timer invalidate];
+	}
+}
+
+
+- (void)moveViewToRandomPosition:(NSTimer*)sender
+{
+	CGRect viewFrame = self.frameView.frame;
+	CGRect selfViewBounds = self.view.bounds;
+	CGSize allowValues = CGSizeMake(CGRectGetWidth(selfViewBounds) - CGRectGetWidth(viewFrame),
+											  CGRectGetHeight(selfViewBounds) - CGRectGetHeight(viewFrame));
+	CGSize value = CGSizeMake(((CGFloat)rand() / (CGFloat)RAND_MAX) * allowValues.width,
+									  ((CGFloat)rand() / (CGFloat)RAND_MAX) * allowValues.height);
+	CGPoint center = CGPointMake(value.width + CGRectGetWidth(viewFrame) / 2.0,
+										  value.height + CGRectGetHeight(viewFrame) / 2.0);
+	[self _setForFrameViewNewCenter:center];
+}
+
 @end
 
 
@@ -92,10 +140,34 @@
 	CGAffineTransform transform = CGAffineTransformIdentity;
 	if (_transformSwitch.on)
 	{
-		transform = CGAffineTransformRotate(CGAffineTransformMakeScale(2.0, 2.0), M_PI / 3.0);
+		transform = CGAffineTransformRotate(CGAffineTransformMakeScale(1.3, 1.3), M_PI / 3.0);
 	}
 	
 	self.frameView.transform = transform;
+}
+
+
+- (void)_scheduleTimerWithNewTime
+{
+	if (_timer)
+	{
+		[_timer invalidate];
+	}
+	
+	_timer = [NSTimer scheduledTimerWithTimeInterval:self.timeIntervalsSlider.value target:self selector:@selector(moveViewToRandomPosition:) userInfo:nil repeats:YES];
+}
+
+
+- (void)_setForFrameViewNewCenter:(CGPoint)center
+{
+	[CATransaction begin];
+	
+	[CATransaction setValue:@(YES) forKey:kCATransactionDisableActions];
+	
+	_destinationIndicatorView.center = center;
+	self.frameView.center = center;
+	
+	[CATransaction commit];
 }
 
 @end
