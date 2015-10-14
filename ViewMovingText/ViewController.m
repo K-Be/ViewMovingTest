@@ -50,10 +50,11 @@
 	
 	_panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panRecognizerAction:)];
 	[self.frameView addGestureRecognizer:_panRecognizer];
+	self.timerSwitch.on = NO;
 	
 	[self _updateTransformation];
 	
-	[self _scheduleTimerWithNewTime];
+	[self timerSwitchValueChanged:self.timerSwitch];
 }
 
 
@@ -140,7 +141,7 @@
 	CGAffineTransform transform = CGAffineTransformIdentity;
 	if (_transformSwitch.on)
 	{
-		transform = CGAffineTransformRotate(CGAffineTransformMakeScale(2.3, 2.3), M_PI / 3.0);
+		transform = CGAffineTransformRotate(CGAffineTransformMakeScale(4.0, 4.0), M_PI / 3.0);
 	}
 	
 	self.frameView.transform = transform;
