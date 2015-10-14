@@ -45,105 +45,106 @@
 
 
 @implementation ViewController
-            
+
 - (void)viewDidLoad {
-	[super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-	
-	_panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panRecognizerAction:)];
-	[self.frameView addGestureRecognizer:_panRecognizer];
-	
-	self.timerSwitch.on = NO;
-	
-	[self _updateTransformation];
-	
-	[self timerSwitchValueChanged:self.timerSwitch];
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    
+    _panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panRecognizerAction:)];
+    [self.frameView addGestureRecognizer:_panRecognizer];
+    
+    self.timerSwitch.on = NO;
+    
+    [self _updateTransformation];
+    
+    [self timerSwitchValueChanged:self.timerSwitch];
 }
 
 
 - (void)viewDidLayoutSubviews
 {
-	[super viewDidLayoutSubviews];
-	
-	CGAffineTransform transform = self.frameView.transform;
-	self.frameView.transform = CGAffineTransformIdentity;
-	self.frameView.frame = CGRectInset(self.view.bounds, CGRectGetWidth(self.view.bounds) / 3.0, CGRectGetHeight(self.view.bounds) / 3.0);
-	self.frameView.transform = transform;
+    [super viewDidLayoutSubviews];
+    
+    CATransform3D transform = self.frameView.layer.transform;
+    self.frameView.layer.transform = CATransform3DIdentity;
+    self.frameView.frame = CGRectInset(self.view.bounds, CGRectGetWidth(self.view.bounds) / 3.0, CGRectGetHeight(self.view.bounds) / 3.0);
+    self.frameView.layer.transform = transform;
 }
 
 
 #pragma mark Actions
 - (void)panRecognizerAction:(id)sender
 {
-	NSLog(@"Pan");
-	
-	if (_panRecognizer.state == UIGestureRecognizerStateBegan)
-	{
-		_startCenter = _frameView.center;
-	}
-	else if (_panRecognizer.state == UIGestureRecognizerStateChanged)
-	{
-		//CGPoint locationInView = [_panRecognizer locationInView:self.pointsView];
-		//[self.pointsView addPoint:locationInView];
-		//[self.pointsView setNeedsDisplay];
-		
-		CGPoint transition = [_panRecognizer translationInView:self.view];
-		CGPoint newCenter = CGPointMake(_startCenter.x + transition.x, _startCenter.y + transition.y);
-		
-		[self _setForFrameViewNewCenter:newCenter];
-	}
-	else
-	{
-		
-	}
+    //	NSLog(@"Pan");
+    NSLog(@"%f", CACurrentMediaTime());
+    
+    if (_panRecognizer.state == UIGestureRecognizerStateBegan)
+    {
+        _startCenter = _frameView.center;
+    }
+    else if (_panRecognizer.state == UIGestureRecognizerStateChanged)
+    {
+        //CGPoint locationInView = [_panRecognizer locationInView:self.pointsView];
+        //[self.pointsView addPoint:locationInView];
+        //[self.pointsView setNeedsDisplay];
+        
+        CGPoint transition = [_panRecognizer translationInView:self.view];
+        CGPoint newCenter = CGPointMake(_startCenter.x + transition.x, _startCenter.y + transition.y);
+        
+        [self _setForFrameViewNewCenter:newCenter];
+    }
+    else
+    {
+        
+    }
 }
 
 
 - (IBAction)transformSwitchAction:(id)sender
 {
-	[self _updateTransformation];
+    [self _updateTransformation];
 }
 
 
 - (IBAction)tmeIntervalChanged:(id)sender
 {
-	if (self.timerSwitch.on)
-	{
-		[self _scheduleTimerWithNewTime];
-	}
+    if (self.timerSwitch.on)
+    {
+        [self _scheduleTimerWithNewTime];
+    }
 }
 
 
 - (IBAction)timerSwitchValueChanged:(UISwitch*)sender
 {
-	if (sender.on)
-	{
-		[self _scheduleTimerWithNewTime];
-	}
-	else
-	{
-		[_timer invalidate];
-	}
+    if (sender.on)
+    {
+        [self _scheduleTimerWithNewTime];
+    }
+    else
+    {
+        [_timer invalidate];
+    }
 }
 
 
 - (IBAction)cleanPoints:(id)sender
 {
-	
+    
 }
 
 
 - (void)moveViewToRandomPosition:(NSTimer*)sender
 {
-	CGRect viewFrame = self.frameView.frame;
-	CGRect selfViewBounds = self.view.bounds;
-	CGSize allowValues = CGSizeMake(CGRectGetWidth(selfViewBounds) - CGRectGetWidth(viewFrame),
-											  CGRectGetHeight(selfViewBounds) - CGRectGetHeight(viewFrame));
-	CGSize value = CGSizeMake(((CGFloat)rand() / (CGFloat)RAND_MAX) * allowValues.width,
-									  ((CGFloat)rand() / (CGFloat)RAND_MAX) * allowValues.height);
-	CGPoint center = CGPointMake(value.width + CGRectGetWidth(viewFrame) / 2.0,
-										  value.height + CGRectGetHeight(viewFrame) / 2.0);
-	[self _setForFrameViewNewCenter:center];
+    CGRect viewFrame = self.frameView.frame;
+    CGRect selfViewBounds = self.view.bounds;
+    CGSize allowValues = CGSizeMake(CGRectGetWidth(selfViewBounds) - CGRectGetWidth(viewFrame),
+                                    CGRectGetHeight(selfViewBounds) - CGRectGetHeight(viewFrame));
+    CGSize value = CGSizeMake(((CGFloat)rand() / (CGFloat)RAND_MAX) * allowValues.width,
+                              ((CGFloat)rand() / (CGFloat)RAND_MAX) * allowValues.height);
+    CGPoint center = CGPointMake(value.width + CGRectGetWidth(viewFrame) / 2.0,
+                                 value.height + CGRectGetHeight(viewFrame) / 2.0);
+    [self _setForFrameViewNewCenter:center];
 }
 
 @end
@@ -154,40 +155,44 @@
 
 - (void)_updateTransformation
 {
-	CGAffineTransform transform = CGAffineTransformIdentity;
-	if (_transformSwitch.on)
-	{
-		transform = CGAffineTransformRotate(CGAffineTransformMakeScale(4.0, 4.0), M_PI / 3.0);
-	}
-	
-	self.frameView.transform = transform;
+    CGAffineTransform transform = CGAffineTransformIdentity;
+    if (_transformSwitch.on)
+    {
+        transform = CGAffineTransformRotate(CGAffineTransformMakeScale(4.0, 4.0), M_PI / 3.0);
+    }
+    
+    self.frameView.layer.transform = CATransform3DMakeAffineTransform(transform);//transform;//transform = transform;
 }
 
 
 - (void)_scheduleTimerWithNewTime
 {
-	if (_timer)
-	{
-		[_timer invalidate];
-	}
-	
-	_timer = [NSTimer scheduledTimerWithTimeInterval:self.timeIntervalsSlider.value target:self selector:@selector(moveViewToRandomPosition:) userInfo:nil repeats:YES];
+    if (_timer)
+    {
+        [_timer invalidate];
+    }
+    
+    _timer = [NSTimer scheduledTimerWithTimeInterval:self.timeIntervalsSlider.value target:self selector:@selector(moveViewToRandomPosition:) userInfo:nil repeats:YES];
 }
 
 
 - (void)_setForFrameViewNewCenter:(CGPoint)center
 {
-	[CATransaction begin];
-	[CATransaction setValue:@(YES) forKey:kCATransactionDisableActions];
-	
-	_destinationIndicatorView.center = center;
-	if ([self.callRedrawSwitch isOn])
-	{
-		[self.frameView setNeedsDisplay];
-	}
-	self.frameView.center = center;
-	
-	[CATransaction commit];
+//    [CATransaction begin];
+//    [CATransaction setDisableActions:YES];
+    //    	[CATransaction setValue:@(YES) forKey:kCATransactionDisableActions];
+    
+    
+    if ([self.callRedrawSwitch isOn])
+    {
+        [self.frameView.layer setNeedsDisplay];
+    }
+    
+    _destinationIndicatorView.center = center;
+    self.frameView.center = center;
+    
+    
+//    [CATransaction commit];
 }
 
 @end

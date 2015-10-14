@@ -41,33 +41,9 @@
 	return self;
 }
 
-
-- (void)drawRect:(CGRect)rect
-{
-	[super drawRect:rect];
-}
-
-
-/*- (void)drawRect:(CGRect)rect
-{
-	[super drawRect:rect];
-	
-	CGContextRef context = UIGraphicsGetCurrentContext();
-	CGMutablePathRef path = CGPathCreateMutable();
-	CGPathAddRect(path, NULL, CGRectInset(self.bounds, 10.0, 10.0));
-	
-	CGContextSetLineWidth(context, 3);
-	CGContextSetStrokeColorWithColor(context, _borderColor.CGColor);
-	CGContextAddPath(context, path);
-	CGContextStrokePath(context);
-	
-	CGPathRelease(path);
-}*/
-
-
 - (id<CAAction>)actionForLayer:(CALayer *)layer forKey:(NSString *)event
 {
-	return nil;
+	return [NSNull null];
 }
 
 
