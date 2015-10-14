@@ -76,6 +76,7 @@
 - (void)panRecognizerAction:(id)sender
 {
     //	NSLog(@"Pan");
+    NSLog(@"%f", CACurrentMediaTime());
     
     if (_panRecognizer.state == UIGestureRecognizerStateBegan)
     {
@@ -177,8 +178,8 @@
 
 - (void)_setForFrameViewNewCenter:(CGPoint)center
 {
-    [CATransaction begin];
-    [CATransaction setDisableActions:YES];
+//    [CATransaction begin];
+//    [CATransaction setDisableActions:YES];
     //    	[CATransaction setValue:@(YES) forKey:kCATransactionDisableActions];
     
     
@@ -191,7 +192,7 @@
     self.frameView.center = center;
     
     
-    [CATransaction commit];
+//    [CATransaction commit];
 }
 
 @end
