@@ -16,7 +16,6 @@
 		13B0710219A495C200C39DE7 /* ViewMovingTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B0710119A495C200C39DE7 /* ViewMovingTextTests.m */; };
 		13B0710D19A49A5F00C39DE7 /* FrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B0710C19A49A5F00C39DE7 /* FrameView.m */; };
 		13B0710F19A49F8800C39DE7 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13B0710E19A49F8800C39DE7 /* background.jpg */; };
-		49B77E3C1BCE6343006374AD /* PointsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B77E3B1BCE6343006374AD /* PointsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +46,6 @@
 		13B0710B19A49A5F00C39DE7 /* FrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameView.h; sourceTree = "<group>"; };
 		13B0710C19A49A5F00C39DE7 /* FrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameView.m; sourceTree = "<group>"; };
 		13B0710E19A49F8800C39DE7 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
-		49B77E3A1BCE6343006374AD /* PointsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointsView.h; sourceTree = "<group>"; };
-		49B77E3B1BCE6343006374AD /* PointsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointsView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +94,6 @@
 				13B070F219A495C200C39DE7 /* Main.storyboard */,
 				13863AD81A15C2D800479B65 /* ViewForControl.h */,
 				13863AD91A15C2D800479B65 /* ViewForControl.m */,
-				49B77E3A1BCE6343006374AD /* PointsView.h */,
-				49B77E3B1BCE6343006374AD /* PointsView.m */,
 				13B0710B19A49A5F00C39DE7 /* FrameView.h */,
 				13B0710C19A49A5F00C39DE7 /* FrameView.m */,
 				13B0710E19A49F8800C39DE7 /* background.jpg */,
@@ -237,7 +232,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B0710D19A49A5F00C39DE7 /* FrameView.m in Sources */,
-				49B77E3C1BCE6343006374AD /* PointsView.m in Sources */,
 				13B070F119A495C200C39DE7 /* ViewController.m in Sources */,
 				13B070EE19A495C200C39DE7 /* AppDelegate.m in Sources */,
 				13B070EB19A495C200C39DE7 /* main.m in Sources */,

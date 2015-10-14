@@ -45,6 +45,12 @@
 - (void)drawRect:(CGRect)rect
 {
 	[super drawRect:rect];
+}
+
+
+/*- (void)drawRect:(CGRect)rect
+{
+	[super drawRect:rect];
 	
 	CGContextRef context = UIGraphicsGetCurrentContext();
 	CGMutablePathRef path = CGPathCreateMutable();
@@ -56,7 +62,7 @@
 	CGContextStrokePath(context);
 	
 	CGPathRelease(path);
-}
+}*/
 
 
 - (id<CAAction>)actionForLayer:(CALayer *)layer forKey:(NSString *)event

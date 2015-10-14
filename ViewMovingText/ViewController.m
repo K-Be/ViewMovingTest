@@ -18,6 +18,7 @@
 @property (nonatomic, strong) IBOutlet UISlider* timeIntervalsSlider;
 @property (nonatomic, strong) IBOutlet UIView* destinationIndicatorView;
 @property (nonatomic, strong) IBOutlet UISwitch* timerSwitch;
+@property (nonatomic, strong) IBOutlet UISwitch* callRedrawSwitch;
 @property (nonatomic, strong) UIPanGestureRecognizer* panRecognizer;
 @property (nonatomic, weak) NSTimer* timer;
 @property (nonatomic) CGPoint startCenter;
@@ -26,6 +27,7 @@
 - (IBAction)transformSwitchAction:(id)sender;
 - (IBAction)tmeIntervalChanged:(id)sender;
 - (IBAction)timerSwitchValueChanged:(UISwitch*)sender;
+- (IBAction)cleanPoints:(id)sender;
 
 - (void)moveViewToRandomPosition:(NSTimer*)sender;
 
@@ -50,6 +52,7 @@
 	
 	_panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panRecognizerAction:)];
 	[self.frameView addGestureRecognizer:_panRecognizer];
+	
 	self.timerSwitch.on = NO;
 	
 	[self _updateTransformation];
@@ -72,14 +75,21 @@
 #pragma mark Actions
 - (void)panRecognizerAction:(id)sender
 {
+	NSLog(@"Pan");
+	
 	if (_panRecognizer.state == UIGestureRecognizerStateBegan)
 	{
 		_startCenter = _frameView.center;
 	}
 	else if (_panRecognizer.state == UIGestureRecognizerStateChanged)
 	{
+		//CGPoint locationInView = [_panRecognizer locationInView:self.pointsView];
+		//[self.pointsView addPoint:locationInView];
+		//[self.pointsView setNeedsDisplay];
+		
 		CGPoint transition = [_panRecognizer translationInView:self.view];
 		CGPoint newCenter = CGPointMake(_startCenter.x + transition.x, _startCenter.y + transition.y);
+		
 		[self _setForFrameViewNewCenter:newCenter];
 	}
 	else
@@ -114,6 +124,12 @@
 	{
 		[_timer invalidate];
 	}
+}
+
+
+- (IBAction)cleanPoints:(id)sender
+{
+	
 }
 
 
@@ -162,10 +178,13 @@
 - (void)_setForFrameViewNewCenter:(CGPoint)center
 {
 	[CATransaction begin];
-	
 	[CATransaction setValue:@(YES) forKey:kCATransactionDisableActions];
 	
 	_destinationIndicatorView.center = center;
+	if ([self.callRedrawSwitch isOn])
+	{
+		[self.frameView setNeedsDisplay];
+	}
 	self.frameView.center = center;
 	
 	[CATransaction commit];
