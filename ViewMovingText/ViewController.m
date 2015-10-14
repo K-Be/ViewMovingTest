@@ -140,7 +140,7 @@
 	CGAffineTransform transform = CGAffineTransformIdentity;
 	if (_transformSwitch.on)
 	{
-		transform = CGAffineTransformRotate(CGAffineTransformMakeScale(1.3, 1.3), M_PI / 3.0);
+		transform = CGAffineTransformRotate(CGAffineTransformMakeScale(2.3, 2.3), M_PI / 3.0);
 	}
 	
 	self.frameView.transform = transform;
