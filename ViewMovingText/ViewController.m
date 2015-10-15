@@ -52,6 +52,8 @@
     
     _panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panRecognizerAction:)];
     [self.frameView addGestureRecognizer:_panRecognizer];
+    self.view.clipsToBounds = YES;
+    
     
     self.timerSwitch.on = NO;
     
@@ -65,18 +67,21 @@
 {
     [super viewDidLayoutSubviews];
     
+    self.frameView.layer.shouldRasterize = NO;
+    
     CATransform3D transform = self.frameView.layer.transform;
     self.frameView.layer.transform = CATransform3DIdentity;
     self.frameView.frame = CGRectInset(self.view.bounds, CGRectGetWidth(self.view.bounds) / 3.0, CGRectGetHeight(self.view.bounds) / 3.0);
     self.frameView.layer.transform = transform;
+    
+    self.frameView.layer.rasterizationScale = 4.0;
+    self.frameView.layer.shouldRasterize = YES;
 }
 
 
 #pragma mark Actions
 - (void)panRecognizerAction:(id)sender
 {
-    //	NSLog(@"Pan");
-    NSLog(@"%f", CACurrentMediaTime());
     
     if (_panRecognizer.state == UIGestureRecognizerStateBegan)
     {
@@ -155,6 +160,8 @@
 
 - (void)_updateTransformation
 {
+    self.frameView.layer.shouldRasterize = NO;
+    
     CGAffineTransform transform = CGAffineTransformIdentity;
     if (_transformSwitch.on)
     {
@@ -162,6 +169,9 @@
     }
     
     self.frameView.layer.transform = CATransform3DMakeAffineTransform(transform);//transform;//transform = transform;
+    
+    self.frameView.layer.rasterizationScale = 4.0;
+    self.frameView.layer.shouldRasterize = YES;
 }
 
 
