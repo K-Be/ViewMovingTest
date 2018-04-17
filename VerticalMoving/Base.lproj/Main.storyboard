@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14111" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WpJ-Pf-EHb"/>
+                        <viewControllerLayoutGuide type="bottom" id="slb-sQ-oGl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vuS-zF-TNf">
+                                <rect key="frame" x="121" y="52" width="133" height="108"/>
+                                <color key="backgroundColor" red="0.30019030003893921" green="1" blue="0.17334775655673018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="XfK-yc-izE"/>
+                                    <constraint firstAttribute="width" constant="133" id="ZDe-oc-Xif"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="y98-U5-cdY">
+                                <rect key="frame" x="124" y="631" width="127" height="29"/>
+                                <segments>
+                                    <segment title="Regular"/>
+                                    <segment title="Velocity"/>
+                                </segments>
+                                <connections>
+                                    <action selector="typeOfMovingChangedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="Bhx-Lj-sJw"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="y98-U5-cdY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IB8-0B-h52"/>
+                            <constraint firstItem="vuS-zF-TNf" firstAttribute="top" secondItem="WpJ-Pf-EHb" secondAttribute="bottom" constant="32" id="QkI-MR-u31"/>
+                            <constraint firstItem="vuS-zF-TNf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i1u-nx-BQR"/>
+                            <constraint firstItem="slb-sQ-oGl" firstAttribute="top" secondItem="y98-U5-cdY" secondAttribute="bottom" constant="8" id="k25-tS-ti9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="movingView" destination="vuS-zF-TNf" id="0kc-JH-mYL"/>
+                        <outlet property="topDistance" destination="QkI-MR-u31" id="P4p-5C-6T2"/>
+                        <outlet property="typeOfMovingSegmentedControl" destination="y98-U5-cdY" id="0X4-4V-RwM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>

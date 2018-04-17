@@ -16,6 +16,18 @@
 		13B0710219A495C200C39DE7 /* ViewMovingTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B0710119A495C200C39DE7 /* ViewMovingTextTests.m */; };
 		13B0710D19A49A5F00C39DE7 /* FrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B0710C19A49A5F00C39DE7 /* FrameView.m */; };
 		13B0710F19A49F8800C39DE7 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 13B0710E19A49F8800C39DE7 /* background.jpg */; };
+		49AC48B120858F5F006F6B67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AC48B020858F5F006F6B67 /* AppDelegate.m */; };
+		49AC48B420858F5F006F6B67 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AC48B320858F5F006F6B67 /* ViewController.m */; };
+		49AC48B720858F5F006F6B67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AC48B520858F5F006F6B67 /* Main.storyboard */; };
+		49AC48B920858F61006F6B67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49AC48B820858F61006F6B67 /* Assets.xcassets */; };
+		49AC48BC20858F61006F6B67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AC48BA20858F61006F6B67 /* LaunchScreen.storyboard */; };
+		49AC48BF20858F61006F6B67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AC48BE20858F61006F6B67 /* main.m */; };
+		49AC48C920858F62006F6B67 /* VerticalMovingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AC48C820858F62006F6B67 /* VerticalMovingTests.m */; };
+		49AC48DD20858FA5006F6B67 /* VelocityMover.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AC48D220858FA4006F6B67 /* VelocityMover.m */; };
+		49AC48DE20858FA5006F6B67 /* Animator.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AC48D420858FA4006F6B67 /* Animator.m */; };
+		49AC48DF20858FA5006F6B67 /* MovingWithVelocityAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AC48D720858FA4006F6B67 /* MovingWithVelocityAnimation.m */; };
+		49AC48E020858FA5006F6B67 /* RegularMover.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AC48DB20858FA5006F6B67 /* RegularMover.m */; };
+		49AC48E120858FA5006F6B67 /* MoverBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AC48DC20858FA5006F6B67 /* MoverBase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +37,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 13B070E419A495C200C39DE7;
 			remoteInfo = ViewMovingText;
+		};
+		49AC48C520858F62006F6B67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 13B070DD19A495C200C39DE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49AC48AC20858F5F006F6B67;
+			remoteInfo = VerticalMoving;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -46,6 +65,30 @@
 		13B0710B19A49A5F00C39DE7 /* FrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameView.h; sourceTree = "<group>"; };
 		13B0710C19A49A5F00C39DE7 /* FrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameView.m; sourceTree = "<group>"; };
 		13B0710E19A49F8800C39DE7 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		49AC48AD20858F5F006F6B67 /* VerticalMoving.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerticalMoving.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49AC48AF20858F5F006F6B67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		49AC48B020858F5F006F6B67 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		49AC48B220858F5F006F6B67 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		49AC48B320858F5F006F6B67 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		49AC48B620858F5F006F6B67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49AC48B820858F61006F6B67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49AC48BB20858F61006F6B67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		49AC48BD20858F61006F6B67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49AC48BE20858F61006F6B67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		49AC48C420858F61006F6B67 /* VerticalMovingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VerticalMovingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49AC48C820858F62006F6B67 /* VerticalMovingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerticalMovingTests.m; sourceTree = "<group>"; };
+		49AC48CA20858F62006F6B67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49AC48D220858FA4006F6B67 /* VelocityMover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VelocityMover.m; sourceTree = "<group>"; };
+		49AC48D320858FA4006F6B67 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
+		49AC48D420858FA4006F6B67 /* Animator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animator.m; sourceTree = "<group>"; };
+		49AC48D520858FA4006F6B67 /* MovingWithVelocityAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingWithVelocityAnimation.h; sourceTree = "<group>"; };
+		49AC48D620858FA4006F6B67 /* VelocityMover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VelocityMover.h; sourceTree = "<group>"; };
+		49AC48D720858FA4006F6B67 /* MovingWithVelocityAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingWithVelocityAnimation.m; sourceTree = "<group>"; };
+		49AC48D820858FA4006F6B67 /* Animator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animator.h; sourceTree = "<group>"; };
+		49AC48D920858FA4006F6B67 /* MoverBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoverBase.h; sourceTree = "<group>"; };
+		49AC48DA20858FA4006F6B67 /* RegularMover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularMover.h; sourceTree = "<group>"; };
+		49AC48DB20858FA5006F6B67 /* RegularMover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularMover.m; sourceTree = "<group>"; };
+		49AC48DC20858FA5006F6B67 /* MoverBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoverBase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +106,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		49AC48AA20858F5F006F6B67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49AC48C120858F61006F6B67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -71,6 +128,8 @@
 			children = (
 				13B070E719A495C200C39DE7 /* ViewMovingTest */,
 				13B070FE19A495C200C39DE7 /* ViewMovingTestTests */,
+				49AC48AE20858F5F006F6B67 /* VerticalMoving */,
+				49AC48C720858F62006F6B67 /* VerticalMovingTests */,
 				13B070E619A495C200C39DE7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,6 +139,8 @@
 			children = (
 				13B070E519A495C200C39DE7 /* ViewMovingTest.app */,
 				13B070FB19A495C200C39DE7 /* ViewMovingTestTests.xctest */,
+				49AC48AD20858F5F006F6B67 /* VerticalMoving.app */,
+				49AC48C420858F61006F6B67 /* VerticalMovingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +192,50 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		49AC48AE20858F5F006F6B67 /* VerticalMoving */ = {
+			isa = PBXGroup;
+			children = (
+				49AC48D920858FA4006F6B67 /* MoverBase.h */,
+				49AC48DC20858FA5006F6B67 /* MoverBase.m */,
+				49AC48DA20858FA4006F6B67 /* RegularMover.h */,
+				49AC48DB20858FA5006F6B67 /* RegularMover.m */,
+				49AC48D120858FA4006F6B67 /* velocityMover */,
+				49AC48AF20858F5F006F6B67 /* AppDelegate.h */,
+				49AC48B020858F5F006F6B67 /* AppDelegate.m */,
+				49AC48B220858F5F006F6B67 /* ViewController.h */,
+				49AC48B320858F5F006F6B67 /* ViewController.m */,
+				49AC48B520858F5F006F6B67 /* Main.storyboard */,
+				49AC48B820858F61006F6B67 /* Assets.xcassets */,
+				49AC48BA20858F61006F6B67 /* LaunchScreen.storyboard */,
+				49AC48BD20858F61006F6B67 /* Info.plist */,
+				49AC48BE20858F61006F6B67 /* main.m */,
+			);
+			path = VerticalMoving;
+			sourceTree = "<group>";
+		};
+		49AC48C720858F62006F6B67 /* VerticalMovingTests */ = {
+			isa = PBXGroup;
+			children = (
+				49AC48C820858F62006F6B67 /* VerticalMovingTests.m */,
+				49AC48CA20858F62006F6B67 /* Info.plist */,
+			);
+			path = VerticalMovingTests;
+			sourceTree = "<group>";
+		};
+		49AC48D120858FA4006F6B67 /* velocityMover */ = {
+			isa = PBXGroup;
+			children = (
+				49AC48D220858FA4006F6B67 /* VelocityMover.m */,
+				49AC48D320858FA4006F6B67 /* Animation.h */,
+				49AC48D420858FA4006F6B67 /* Animator.m */,
+				49AC48D520858FA4006F6B67 /* MovingWithVelocityAnimation.h */,
+				49AC48D620858FA4006F6B67 /* VelocityMover.h */,
+				49AC48D720858FA4006F6B67 /* MovingWithVelocityAnimation.m */,
+				49AC48D820858FA4006F6B67 /* Animator.h */,
+			);
+			path = velocityMover;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,6 +274,41 @@
 			productReference = 13B070FB19A495C200C39DE7 /* ViewMovingTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		49AC48AC20858F5F006F6B67 /* VerticalMoving */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49AC48CF20858F62006F6B67 /* Build configuration list for PBXNativeTarget "VerticalMoving" */;
+			buildPhases = (
+				49AC48A920858F5F006F6B67 /* Sources */,
+				49AC48AA20858F5F006F6B67 /* Frameworks */,
+				49AC48AB20858F5F006F6B67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VerticalMoving;
+			productName = VerticalMoving;
+			productReference = 49AC48AD20858F5F006F6B67 /* VerticalMoving.app */;
+			productType = "com.apple.product-type.application";
+		};
+		49AC48C320858F61006F6B67 /* VerticalMovingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49AC48D020858F62006F6B67 /* Build configuration list for PBXNativeTarget "VerticalMovingTests" */;
+			buildPhases = (
+				49AC48C020858F61006F6B67 /* Sources */,
+				49AC48C120858F61006F6B67 /* Frameworks */,
+				49AC48C220858F61006F6B67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49AC48C620858F62006F6B67 /* PBXTargetDependency */,
+			);
+			name = VerticalMovingTests;
+			productName = VerticalMovingTests;
+			productReference = 49AC48C420858F61006F6B67 /* VerticalMovingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +324,15 @@
 					13B070FA19A495C200C39DE7 = {
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = 13B070E419A495C200C39DE7;
+					};
+					49AC48AC20858F5F006F6B67 = {
+						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
+					};
+					49AC48C320858F61006F6B67 = {
+						CreatedOnToolsVersion = 9.4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 49AC48AC20858F5F006F6B67;
 					};
 				};
 			};
@@ -202,6 +351,8 @@
 			targets = (
 				13B070E419A495C200C39DE7 /* ViewMovingTest */,
 				13B070FA19A495C200C39DE7 /* ViewMovingTestTests */,
+				49AC48AC20858F5F006F6B67 /* VerticalMoving */,
+				49AC48C320858F61006F6B67 /* VerticalMovingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -218,6 +369,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		13B070F919A495C200C39DE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49AC48AB20858F5F006F6B67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49AC48BC20858F61006F6B67 /* LaunchScreen.storyboard in Resources */,
+				49AC48B920858F61006F6B67 /* Assets.xcassets in Resources */,
+				49AC48B720858F5F006F6B67 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49AC48C220858F61006F6B67 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -247,6 +415,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		49AC48A920858F5F006F6B67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49AC48DE20858FA5006F6B67 /* Animator.m in Sources */,
+				49AC48DF20858FA5006F6B67 /* MovingWithVelocityAnimation.m in Sources */,
+				49AC48E120858FA5006F6B67 /* MoverBase.m in Sources */,
+				49AC48E020858FA5006F6B67 /* RegularMover.m in Sources */,
+				49AC48B420858F5F006F6B67 /* ViewController.m in Sources */,
+				49AC48BF20858F61006F6B67 /* main.m in Sources */,
+				49AC48DD20858FA5006F6B67 /* VelocityMover.m in Sources */,
+				49AC48B120858F5F006F6B67 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49AC48C020858F61006F6B67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49AC48C920858F62006F6B67 /* VerticalMovingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -254,6 +445,11 @@
 			isa = PBXTargetDependency;
 			target = 13B070E419A495C200C39DE7 /* ViewMovingTest */;
 			targetProxy = 13B070FC19A495C200C39DE7 /* PBXContainerItemProxy */;
+		};
+		49AC48C620858F62006F6B67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49AC48AC20858F5F006F6B67 /* VerticalMoving */;
+			targetProxy = 49AC48C520858F62006F6B67 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -264,6 +460,22 @@
 				13B070F319A495C200C39DE7 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		49AC48B520858F5F006F6B67 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49AC48B620858F5F006F6B67 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		49AC48BA20858F61006F6B67 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49AC48BB20858F61006F6B67 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -403,6 +615,148 @@
 			};
 			name = Release;
 		};
+		49AC48CB20858F62006F6B67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = VerticalMoving/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rav.org.VerticalMoving;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		49AC48CC20858F62006F6B67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = VerticalMoving/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rav.org.VerticalMoving;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		49AC48CD20858F62006F6B67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = VerticalMovingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rav.org.VerticalMovingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VerticalMoving.app/VerticalMoving";
+			};
+			name = Debug;
+		};
+		49AC48CE20858F62006F6B67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = VerticalMovingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rav.org.VerticalMovingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VerticalMoving.app/VerticalMoving";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -429,6 +783,24 @@
 			buildConfigurations = (
 				13B0710919A495C200C39DE7 /* Debug */,
 				13B0710A19A495C200C39DE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49AC48CF20858F62006F6B67 /* Build configuration list for PBXNativeTarget "VerticalMoving" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49AC48CB20858F62006F6B67 /* Debug */,
+				49AC48CC20858F62006F6B67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49AC48D020858F62006F6B67 /* Build configuration list for PBXNativeTarget "VerticalMovingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49AC48CD20858F62006F6B67 /* Debug */,
+				49AC48CE20858F62006F6B67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
