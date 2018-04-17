@@ -225,13 +225,13 @@
 		49AC48D120858FA4006F6B67 /* velocityMover */ = {
 			isa = PBXGroup;
 			children = (
-				49AC48D220858FA4006F6B67 /* VelocityMover.m */,
 				49AC48D320858FA4006F6B67 /* Animation.h */,
+				49AC48D820858FA4006F6B67 /* Animator.h */,
 				49AC48D420858FA4006F6B67 /* Animator.m */,
 				49AC48D520858FA4006F6B67 /* MovingWithVelocityAnimation.h */,
-				49AC48D620858FA4006F6B67 /* VelocityMover.h */,
 				49AC48D720858FA4006F6B67 /* MovingWithVelocityAnimation.m */,
-				49AC48D820858FA4006F6B67 /* Animator.h */,
+				49AC48D620858FA4006F6B67 /* VelocityMover.h */,
+				49AC48D220858FA4006F6B67 /* VelocityMover.m */,
 			);
 			path = velocityMover;
 			sourceTree = "<group>";
@@ -320,6 +320,7 @@
 				TargetAttributes = {
 					13B070E419A495C200C39DE7 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 25WDLLAK34;
 					};
 					13B070FA19A495C200C39DE7 = {
 						CreatedOnToolsVersion = 6.0;
@@ -327,6 +328,7 @@
 					};
 					49AC48AC20858F5F006F6B67 = {
 						CreatedOnToolsVersion = 9.4;
+						DevelopmentTeam = 25WDLLAK34;
 						ProvisioningStyle = Automatic;
 					};
 					49AC48C320858F61006F6B67 = {
@@ -564,8 +566,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 25WDLLAK34;
 				INFOPLIST_FILE = ViewMovingText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rav.ViewMovingTest;
 				PRODUCT_NAME = ViewMovingTest;
 			};
 			name = Debug;
@@ -575,8 +579,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 25WDLLAK34;
 				INFOPLIST_FILE = ViewMovingText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rav.ViewMovingTest;
 				PRODUCT_NAME = ViewMovingTest;
 			};
 			name = Release;
@@ -638,6 +644,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 25WDLLAK34;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -674,6 +681,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 25WDLLAK34;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = VerticalMoving/Info.plist;

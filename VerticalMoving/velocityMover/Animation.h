@@ -10,6 +10,7 @@
 
 @protocol Animation <NSObject>
 
+@property (nonatomic) NSTimeInterval duration;
 @property (nonatomic) NSTimeInterval startTime;
 
 - (void)exec:(NSTimeInterval)time;

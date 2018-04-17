@@ -11,6 +11,19 @@
 @implementation MovingWithVelocityAnimation
 
 @synthesize startTime = _startTime;
+@synthesize duration = _duration;
+
+
+- (instancetype)init
+{
+	if (self = [super init])
+	{
+		_duration = CGFLOAT_MAX;
+	}
+	
+	return self;
+}
+
 
 - (void)exec:(NSTimeInterval)time
 {

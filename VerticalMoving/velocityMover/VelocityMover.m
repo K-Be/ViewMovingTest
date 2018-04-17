@@ -52,13 +52,20 @@
 
 - (void)panRecognizerStateChanged:(UIPanGestureRecognizer*)sender
 {
+//	static NSDate* date = nil;
+	
 	if (sender.state == UIGestureRecognizerStateBegan)
 	{
+//		date = [NSDate date];
 		[sender setTranslation:CGPointMake(0.0, self.constraint.constant) inView:sender.view];
 		[self _startMovingPrediction];
 	}
 	else if (sender.state == UIGestureRecognizerStateChanged)
 	{
+	//	NSDate* currentDate = [NSDate date];
+//		NSLog(@"time: %@",@([currentDate timeIntervalSinceDate:date]));
+	//	date = currentDate;
+		
 		CGPoint translation = [sender translationInView:sender.view];
 		CGFloat offset = [self adjustOffset:translation.y];
 		self.constraint.constant = offset;
@@ -95,6 +102,7 @@
 	{
 		_animation = [[MovingWithVelocityAnimation alloc] init];
 		_animation.startPosition = [self.panRecognizer translationInView:self.panRecognizer.view];
+		_animation.duration = 0.015;
 		_animation.velocity = velocity;
 		__weak typeof(self) selfWeak = self;
 		_animation.callback = ^(CGPoint position) {

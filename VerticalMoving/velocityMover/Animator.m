@@ -64,10 +64,24 @@
 #pragma mark Actions
 - (void)displayLinkAction:(id)sender
 {
+	
+	NSMutableArray* animationsToRemovig = [[NSMutableArray alloc] initWithCapacity:1];
+	
 	NSTimeInterval timeStamp =  [[NSDate date] timeIntervalSince1970];
 	[_animations enumerateObjectsUsingBlock:^(id<Animation>  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-		[obj exec:(timeStamp - obj.startTime)];
+		CGFloat completedDuration = (timeStamp - obj.startTime);
+		[obj exec:completedDuration];
+		
+		if (completedDuration >= obj.duration)
+		{
+			[animationsToRemovig addObject:obj];
+		}
 	}];
+	
+	if (animationsToRemovig > 0)
+	{
+		[_animations removeObjectsInArray:animationsToRemovig];
+	}
 }
 
 
