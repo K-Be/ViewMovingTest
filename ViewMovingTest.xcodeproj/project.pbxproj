@@ -569,7 +569,7 @@
 				DEVELOPMENT_TEAM = 25WDLLAK34;
 				INFOPLIST_FILE = ViewMovingText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = rav.ViewMovingTest;
+				PRODUCT_BUNDLE_IDENTIFIER = rav3.ViewMovingTest;
 				PRODUCT_NAME = ViewMovingTest;
 			};
 			name = Debug;
@@ -582,7 +582,7 @@
 				DEVELOPMENT_TEAM = 25WDLLAK34;
 				INFOPLIST_FILE = ViewMovingText/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = rav.ViewMovingTest;
+				PRODUCT_BUNDLE_IDENTIFIER = rav3.ViewMovingTest;
 				PRODUCT_NAME = ViewMovingTest;
 			};
 			name = Release;
